@@ -53,7 +53,7 @@ Both the instances need to be in the same security group otherwise hazelcast won
 
 You will need to create some inbound rules for the security group 
 
-![security rules](/asset/Ec2-inbound.PNG)
+![security rules](/asset/Ec2-2-inbound.PNG)
 
 - HTTP on port 80 and ssh on 22 rules are there by default 
 - Custom TCP rule on port range 5701-5708 those are hazelcast cluster ports and needs to be opened.
@@ -66,9 +66,7 @@ Then you will need to create an *Application Load Balancer*.
 
 It will face the internet on port 80 (for the moment HTTPS is not enabled on our web application) 
 
-assing the LB to the same security group of the linux machine , and finally register your linux machine under his balacing. Keep in mind that machines will need 
-
-to be running in order to be seen when registering them.
+Assign the LB to the same security group of the linux machine , and finally register your linux machine under his balancing. Keep in mind that machines will need  to be running in order to be seen when registering them.
 
 
 ![Registered instance](/asset/Ec2-4.PNG)
