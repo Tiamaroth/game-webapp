@@ -90,7 +90,7 @@ If you then try to curl at `loadbalanceraddress/test/find-match` adding the need
 
 if the request is dispatched to the wrong warzone, the task will be forwarded to the member who hold the correct one.
 
-![Registered instance](/asset/hazel3.PNG)
+![Registered instance](/asset/Matchfind1.PNG)
 
 Here webapp hosting warzoneB is receiving a request for warzoneA, in the logs of warzoneB
 
@@ -98,4 +98,9 @@ Then the findMatch command will be fully executed on the correct warzone , and t
 
 check the status of the matchfind from any webapp without forwarding the request.
 
+10 seconds later we log that the match has been found and if we curl the resource *check-find-status* with the correct username 
+
+we will retrieve the match id and delete the entry from hazelcast shared map
+
+![Registered instance](/asset/Matchfind.PNG)
 
