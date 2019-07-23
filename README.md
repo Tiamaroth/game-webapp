@@ -8,7 +8,7 @@ and ready to be deployed on amazon ec2 server thanks to spring boot.
 
 ### What it does
 
-For the moment the webapp simply starts an Hazelcast cluster and expose a *find-match* resource , which will always return 1.
+For the moment the webapp simply starts an Hazelcast cluster and expose two resources *find-match* and *check-find-status*.
 
 You can lunch multiple instance of it , Hazelcast will keep track of each of them creating the cluster.
 
@@ -16,7 +16,7 @@ It tryies to mimic Killzone's server behavior by keeping in a distribuited map w
 
 and forwarding the  *find-match command*  to it via Hazelcast's IExecutorService. 
 
-Then with "check-find-status" call is possible to check if the match has been found for the requested user
+Then with *check-find-status* call is possible to check if the match has been found for the requested user
 
 ### TODO 
 
