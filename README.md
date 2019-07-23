@@ -18,7 +18,7 @@ and forwarding the  *find-match task*  to it via Hazelcast's IExecutorService.
 
 ### TODO 
 
-- Find a way to store a task while is being executed so that the client can return and ask if his task is completed. [Ongoing in message-queuing branch](https://github.com/Tiamaroth/game-webapp/tree/message-queuing)
+- Find a way to store a task while is being executed so that the client can return and ask if his task is completed. [Done on runnableImpl branch](https://github.com/Tiamaroth/game-webapp/tree/runnableImpl)
 
 - Add tests
 
