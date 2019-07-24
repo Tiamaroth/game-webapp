@@ -85,11 +85,11 @@ public class FindMatchController {
 		if(!warzoneMap.containsKey(warzoneName)) {
 			log.error("Warzone {} not found", warzoneName);
 			status = HttpStatus.BAD_REQUEST;
-			returnMessage = String.format("Warzone {} not found", warzoneName);
+			returnMessage = String.format("Warzone %s not found", warzoneName);
 		}else if(matchfindmap.containsKey(user)) {
 			log.error("User {} is already searching", user);
 			status = HttpStatus.BAD_REQUEST;
-			returnMessage = String.format("User {} is already searching", user);
+			returnMessage = String.format("User %s is already searching", user);
 		}else {
 			service.executeOnMember(new FindMatch(this.warzoneName , warzoneName, user),warzoneMap.get(warzoneName));
 			
@@ -115,11 +115,11 @@ public class FindMatchController {
 		if(!warzoneMap.containsKey(warzoneName)) {
 			log.error("Warzone {} not found", warzoneName);
 			status = HttpStatus.BAD_REQUEST;
-			returnMessage = String.format("Warzone {} not found", warzoneName);
+			returnMessage = String.format("Warzone %s not found", warzoneName);
 		}else if(!matchfindmap.containsKey(user)) {
 			log.error("User {} is not searching for a match", user);
 			status = HttpStatus.BAD_REQUEST;
-			returnMessage = String.format("User {} is not searching for a match", user);
+			returnMessage = String.format("User %s is not searching for a match", user);
 		}else {
 		
 			switch (matchfindmap.get(user).getStatus()) {
